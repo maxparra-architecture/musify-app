@@ -48,13 +48,14 @@ export class UserEditComponent implements OnInit{
                     localStorage.setItem('identity', JSON.stringify(this.user));
                     this.alertUpdate = "User has been updated successfuly";
                     console.log(this.user);
+                    //Actualizar el name en el DOM
+                    document.getElementById("identity_name")!.innerHTML = this.user.name;
 
                     if(!this.filesToUpload){
                         //Redirect
                     }else{
                         this.makeFileRequest(this.url+'upload-image-user/'+this.user._id,[],this.filesToUpload).then(
                             (result:any) => {
-                                console.log(result);
                                 this.user.image = result.image;
                                 localStorage.setItem('identity', JSON.stringify(this.user));
                                 
@@ -62,9 +63,6 @@ export class UserEditComponent implements OnInit{
                                 let image_path = this.url + '/get-image-user/' + this.user.image;
                                 document.getElementById("image-logged")!.setAttribute('src',image_path);
 
-                            },
-                            error =>{
-                                console.log(error);
                             }
                         );
                     }

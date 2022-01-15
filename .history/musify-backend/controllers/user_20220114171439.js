@@ -121,14 +121,17 @@ function uploadImage(req,res){
     var file_name = 'No uploaded';
 
     if(req.files){
+        
+        console.log("***************");
         console.log(req.files.image);
-
         //Extract file name and file extension
         var file_path = req.files.image.path;
         var file_split = file_path.split('/');
         var file_name = file_split[2];
         var ext_split = file_name.split('\.');
         var file_ext = ext_split[1];
+
+        console.log(file_path);
 
         //validate image extension
         if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'gif'){

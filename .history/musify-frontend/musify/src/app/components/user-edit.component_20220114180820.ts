@@ -48,6 +48,11 @@ export class UserEditComponent implements OnInit{
                     localStorage.setItem('identity', JSON.stringify(this.user));
                     this.alertUpdate = "User has been updated successfuly";
                     console.log(this.user);
+                    //Actualizar el name en el DOM
+                    var elem = document.getElementById("name");
+                    if(typeof elem !== 'undefined' && elem !== null) {
+                      elem.innerHTML = this.user.name;
+                    }
 
                     if(!this.filesToUpload){
                         //Redirect
