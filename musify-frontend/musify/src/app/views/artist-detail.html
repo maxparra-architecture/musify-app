@@ -23,7 +23,10 @@
         <ul class="albums-list">
             <li *ngFor="let album of albums" class="col-lg-4 album-item">
                 <div class="album-image">
-                    <img src="{{url+'get-image-album/'+album.image}}"/>
+                    <a [routerLink]="['/detail-album',album._id]">
+                        <img src="{{url+'get-image-album/'+album.image}}"/>
+                    </a>
+                    
                 </div>
                 <div class="album-title">
                     <p>

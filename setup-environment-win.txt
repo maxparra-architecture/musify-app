@@ -1,0 +1,42 @@
+1. Instalar consola cygwin
+https://www.usitility.com/es/cygwin/descargar-windows-64-bits
+
+2. Instalar IDE de desarrollo
+https://code.visualstudio.com/Download
+
+3. Instalar Node JS
+https://nodejs.org/es/
+
+4. Instalar Mongo DB e instalar el Compass
+https://www.mongodb.com/try/download/enterprise
+
+5. Instalar github desktop
+https://desktop.github.com/
+
+6. Crear cuenta de github
+https://github.com/
+
+7. Crear cuenta de postman  herramienta para probar nuestras APIs
+https://web.postman.co/
+
+8. Instalar Postman herramienta para probar nuestras APIs
+https://www.postman.com/downloads/
+
+9. Configurar plugins de visualstudio
+    Prettier
+    Github
+
+10. Instalar Git
+https://git-scm.com/download/win
+
+11. Hacer una prueba creando una carpeta se abre una terminal y se ejecuta git init, luego se publica el repositorio en github y se permiten todas las credenciales y se subre un archivo de prueba
+
+12. Configuraciones Globales de Git
+git config --global user.email "max.parra@zabud.com.co"
+git config --global user.name "Max Parra"
+
+13. Instalar Angular CLI desde cygwin
+npm install -g @angular/cli
+
+14. Crear un hello-world de angular
+ng new hello-world

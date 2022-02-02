@@ -5,7 +5,11 @@
         </div>
         <div class="data">
             <h1>{{album.title}}</h1>
-            <h3>{{artist.name}}</h3>
+            <h3>
+                <a [routerLink]="['/detail-artist',artist._id]">
+                    {{artist.name}}
+                </a>
+            </h3>
             <p>{{album.year}}</p>
             <p class="description">{{album.description}}</p>
 
